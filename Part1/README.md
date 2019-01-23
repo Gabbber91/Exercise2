@@ -12,13 +12,13 @@
 > A mutex functions as a lock. When a thread acquires the mutex, it has "ownership" over the resource that the mutex is locking. Only when the current thread (that is using the resource and has ownership of the mutex) releases the mutex, another thread can get ownership and access to the resource. In contrast a binary semaphore does not protect the resource in the same way the mutex does. A binary semaphore is more of a signal that tells other threads that the resource they are waiting for is available 
 
 ### What is a critical section?
-> A critical sections is a part of the program that accesses a shared variable, protected by a mutex.
+> A critical sections is a part of the program that accesses a shared resource, protected by a mutex.
 
 ### What is the difference between race conditions and data races?
  > A data race happens when for example two threads try to access the same memory location at the same time, and both of them are not read operations. A race condition is a flaw that occurs in the timing or sequences of events that affects the programs correctnes, leading to faulty behaviour. 
 
 ### List some advantages of using message passing over lock-based synchronization primitives.
-> *Your answer here*
+> No shared memory, easier to get right. Clearer when an operation should be done on the data (when a message has been received).
 
 ### List some advantages of using lock-based synchronization primitives over message passing.
-> *Your answer here*
+> Faster as the data doesn't have to be sent back and forth (already available on the CPU). Shared memory helps run processes concurrently. 
