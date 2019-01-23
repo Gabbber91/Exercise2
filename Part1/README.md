@@ -1,9 +1,9 @@
 # Mutex and Channel basics
 
 ### What is an atomic operation?
-> An atomic operation is an operation were other tasks (if for instance we have multiple tasks running in parallel) are barred reading or writing to the memory until the atomic operation has completed. An atomic/indivisible operation either runs until it completes or it dont run at all. 
+> An atomic operation is an operation were other tasks (if for instance we have multiple tasks running in parallel) are barred from reading or writing to the memory until the atomic operation has completed. An atomic/indivisible operation either runs until it completes or it dont run at all. 
 ### What is a semaphore?
-> A semaphore can be as simple as a variable that is used to limit the number of tasks that can access a certain resource at one time. It can for example be implemented as increment/decrement variable and be used as to keep count on how many units of the resource is availeble for use at all times.  
+> A semaphore can be as simple as a variable that is used to limit the number of tasks that can access a certain resource at one time. It can for example be implemented as a increment/decrement variable and be used to keep count on how many units of the resource that is availeble for use at all times.  
 
 ### What is a mutex?
 > Sometimes in multi threaded programs, more than one thread might want access to the same resource. A mutex (mutual exclusive) is used to ensure that only one thread can access the resource at the time. When a thread signals the OS that it wants the resource it will either be given it right away if there is no enabled mutex, or if some other thread is using the resource, it has to wait until this thread is done and the mutex is released before it is given access.  
